@@ -18,9 +18,13 @@ Route::get('/', function () {
 })->name('root');
 
 //root URL -> http://localhost:8000/hi
-Route::get('/hi', function () {
-    return "Hello World";
-})->name('greeting');
+Route::get('/index', function () {
+    return view('home.index',[]);
+})->name('home.index');
+
+Route::get('/contact', function () {
+    return view('home.contact',[]);
+})->name('home.contact');
 
 Route::get('/post/{id?}', function ($id = 1) {
     return "Posting Blog" . $id;
