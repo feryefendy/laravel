@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.app')  {{-- extends digunkan untuk melakukan pewarisan pada layout yang sudah dibuat di app.blade.php sehingga tidak perlu membuat layout kembali --}}
 
-@section('title', $post['title'] )  
+@section('title', $post['title'] )  {{-- menampilkan title --}}
 
-@section('content')
+@section('content')   {{-- awal dari section content sesuai layout--}}
 
 @if($post['is_new'])
 <div>A new blog post!</div>
